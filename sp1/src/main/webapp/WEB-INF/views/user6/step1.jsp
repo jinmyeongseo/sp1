@@ -10,14 +10,15 @@
 </head>
 <body>
 
-<div>
-	<h3>블로그 리스트</h3>
+	<h3>1단계</h3>
 	
-	<ul>
-		<c:forEach var="dto" items="${list}">
-			<li> <a href="${pageContext.request.contextPath}/blog/${dto.blogIdx}/home">${dto.userName} 블로그</a> </li>
-		</c:forEach>
-	</ul>
-</div>
+	<form action="${pageContext.request.contextPath}/user6/step1" method="post">
+		<p> 이름 : <input type="text" name="name" value="${user.name}"> </p>
+		<p> 이메일 : <input type="text" name="email" value="${user.email}"> </p>
+		<p>
+			<button type="submit">다음단계</button>
+		</p>
+		<p>${message}</p>
+	</form>
 </body>
 </html>	  

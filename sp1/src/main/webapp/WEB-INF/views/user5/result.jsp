@@ -10,14 +10,12 @@
 </head>
 <body>
 
-<div>
-	<h3>블로그 리스트</h3>
+	<h3>결과</h3>
 	
-	<ul>
-		<c:forEach var="dto" items="${list}">
-			<li> <a href="${pageContext.request.contextPath}/blog/${dto.blogIdx}/home">${dto.userName} 블로그</a> </li>
-		</c:forEach>
-	</ul>
-</div>
+	<p> ${dto.id} </p>
+	<p> ${dto.pwd} </p>
+	<p> ${dto.name} </p>
+	<p> ${msg} </p>
+	
 </body>
 </html>	  

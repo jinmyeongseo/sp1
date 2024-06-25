@@ -10,14 +10,15 @@
 </head>
 <body>
 
-<div>
-	<h3>블로그 리스트</h3>
+	<h3>회원가입</h3>
 	
-	<ul>
-		<c:forEach var="dto" items="${list}">
-			<li> <a href="${pageContext.request.contextPath}/blog/${dto.blogIdx}/home">${dto.userName} 블로그</a> </li>
-		</c:forEach>
-	</ul>
-</div>
+	<form action="${pageContext.request.contextPath}/user5/write" method="post">
+		<p> 아이디 : <input type="text" name="id"> </p>
+		<p> 패스워드 : <input type="password" name="pwd"> </p>
+		<p> 이름 : <input type="text" name="name"> </p>
+		<p>
+			<button type="submit">등록</button>
+		</p>
+	</form>
 </body>
 </html>	  
